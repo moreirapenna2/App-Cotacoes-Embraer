@@ -40,7 +40,6 @@
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
 </header>
 
 <div class="container-fluid">
@@ -252,6 +251,36 @@
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <h2 class="pt-4 pb-2">Converter valores</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <select class="form-select" aria-label="Default select example" id="moedaSelect">
+            <option selected>Selecione a moeda para conversão</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="AUD">AUD</option>
+            <option value="CHF">CHF</option>
+            <option value="CAD">CAD</option>
+            <option value="CNY">CNY</option>
+            <option value="ARS">ARS</option>
+            <option value="RUB">RUB</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <input type="text" id="moeda1" class="form-control" placeholder="Valor em BRL" aria-label="moeda1" aria-describedby="basic-addon1">
+        </div>
+        <div class="col-md-1">
+          <button type="button" class="btn btn-default btn-lg" onclick="converte()">
+            <span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="col-md-3">
+          <input type="text" id="moeda2" class="form-control" placeholder="Valor convertido" aria-label="moeda2" aria-describedby="basic-addon2" readonly>
+        </div>
       </div>
 
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">

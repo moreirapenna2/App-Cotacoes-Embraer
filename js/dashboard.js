@@ -58,6 +58,8 @@ var currencies = ['USD', 'EUR', 'GBP', 'JPY', 'AUD', 'CHF', 'CAD', 'CNY', 'ARS',
 // Chave da API, deveria ser carregada do env ou bd, mas vou deixar disponibilizada para testes
 var api_key = "32f60b90-8e77-11ec-8d6e-295b9d9abd60";
 
+var currenciesValues = [];
+
 /**
  * Consulta os valores de fechamento nos últimos 7 dias
  */
@@ -161,6 +163,7 @@ function consultaNow() {
       // Itera pelas moedas e adiciona na lista
       for (var i = 0; i < currencies.length; i++) {
         values.push(jsonReturn.data[currencies[i]])
+        currenciesValues[currencies[i]] = jsonReturn.data[currencies[i]];
       }
 
       // Itera novamente pelas moedas, buscando a entrada no front-end
@@ -212,3 +215,18 @@ $( document ).ready(function() {
   setInterval(consultaNow, 20000);
   setInterval(consultaPast, 20000);
 });
+
+function converte(){
+  console.log("called");
+  // Busca o valor escrito em #moeda1
+  var moeda1 = $('#moeda1').val();
+
+  // Busca a moeda selecionada em #moedaSelect
+  var moedaSelect = $('#moedaSelect').val();
+
+  // Multiplica o valor da moeda1 pelo valor da moedaSelect
+  var valorConvertido = currenciesValues[moedaSelect] * moeda1;
+
+  // Insere em #moeda2
+  $('#moeda2').val(valorConvertido);
+}
