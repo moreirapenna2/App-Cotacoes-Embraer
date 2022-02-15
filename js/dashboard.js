@@ -120,7 +120,7 @@ function consultaPast() {
           var element = $(table).find("#"+currencies[j]);
 
           // Define o preço no dia do contador
-          element.find("#preco-"+(i+1)).html("R$ "+valor);
+          element.find("#preco-"+(i+1)).html(+valor);
         }
       }
 
@@ -170,7 +170,7 @@ function consultaNow() {
         var element = $(table).find("#"+currencies[i]);
 
         // Atualiza o valor
-        $(element).find('#preco').html("R$ "+values[i]);
+        $(element).find('#preco').html(values[i]);
         
         // Atualiza o horário
         $(element).find('#data').html(horario);
