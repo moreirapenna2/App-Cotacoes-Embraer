@@ -49,29 +49,206 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 m-auto">
       <h2 class="pt-4">Cotações</h2>
       <div class="table-responsive">
-        <table class="table table-striped table-sm">
+        <table class="table table-striped table-sm" id="cotacoes">
           <thead>
             <tr>
               <th scope="col">Moeda</th>
-              <th scope="col">Último preço</th>
+              <th scope="col">Símbolo</th>
+              <th scope="col">Último preço</th>              
               <th scope="col">Horário</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1,001</td>
-              <td>random</td>
-              <td>data</td>
+            <tr id="USD">
+              <td>Dólar americano</td>
+              <td>USD</td>
+              <td id="preco">0.0</td>
+              <td id="data" class="lastCol" >data</td>
             </tr>
-            <tr>
-              <td>1,002</td>
-              <td>placeholder</td>
-              <td>irrelevant</td>
+            <tr id="EUR">
+              <td>Euro</td>
+              <td>EUR</td>
+              <td id="preco">0.0</td>
+              <td id="data" class="lastCol" >data</td>
             </tr>
+            <tr id="GBP">
+              <td>Libra esterlina</td>
+              <td>GBP</td>
+              <td id="preco">0.0</td>
+              <td id="data" class="lastCol" >data</td>
+            </tr>
+            <tr id="JPY">
+              <td>Iene</td>
+              <td>JPY</td>
+              <td id="preco">0.0</td>
+              <td id="data" class="lastCol" >data</td>
+            </tr>
+            <tr id="AUD">
+              <td>Dólar australiano</td>
+              <td>AUD</td>
+              <td id="preco">0.0</td>
+              <td id="data" class="lastCol" >data</td>
+            </tr>
+            <tr id="CHF">
+              <td>Franco suíço</td>
+              <td>CHF</td>
+              <td id="preco">0.0</td>
+              <td id="data" class="lastCol" >data</td>
+            </tr>
+            <tr id="CAD">
+              <td>Dólar canadense</td>
+              <td>CAD</td>
+              <td id="preco">0.0</td>
+              <td id="data" class="lastCol" >data</td>
+            </tr>
+            <tr id="CNY">
+              <td>Yuan chinês</td>
+              <td>CNY</td>
+              <td id="preco">0.0</td>
+              <td id="data" class="lastCol" >data</td>
+            </tr>
+            <tr id="ARS">
+              <td>Peso argentino</td>
+              <td>ARS</td>
+              <td id="preco">0.0</td>
+              <td id="data" class="lastCol" >data</td>
+            </tr>
+            <tr id="RUB">
+              <td>Rublo</td>
+              <td>RUB</td>
+              <td id="preco">0.0</td>
+              <td id="data" class="lastCol">data</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="pt-4">Fechamentos dos últimos 7 dias</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm" id="fechamentos">
+          <thead>
             <tr>
-              <td>1,003</td>
-              <td>data</td>
-              <td>rich</td>
+              <th scope="col">Moeda</th>
+              <th scope="col">Símbolo</th>
+              <th scope="col" id="1-dia">1 dia atrás</th>              
+              <th scope="col" id="2-dia">2 dias atrás</th>
+              <th scope="col" id="3-dia">3 dias atrás</th>
+              <th scope="col" id="4-dia">4 dias atrás</th>
+              <th scope="col" id="5-dia">5 dias atrás</th>
+              <th scope="col" id="6-dia">6 dias atrás</th>
+              <th scope="col" id="7-dia">7 dias atrás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="USD">
+              <td>Dólar americano</td>
+              <td>USD</td>
+              <td id="preco-1">0.0</td>
+              <td id="preco-2">0.0</td>
+              <td id="preco-3">0.0</td>
+              <td id="preco-4">0.0</td>
+              <td id="preco-5">0.0</td>
+              <td id="preco-6">0.0</td>
+              <td id="preco-7">0.0</td>
+            </tr>
+            <tr id="EUR">
+              <td>Euro</td>
+              <td>EUR</td>
+              <td id="preco-1">0.0</td>
+              <td id="preco-2">0.0</td>
+              <td id="preco-3">0.0</td>
+              <td id="preco-4">0.0</td>
+              <td id="preco-5">0.0</td>
+              <td id="preco-6">0.0</td>
+              <td id="preco-7">0.0</td>
+            </tr>
+            <tr id="GBP">
+              <td>Libra esterlina</td>
+              <td>GBP</td>
+              <td id="preco-1">0.0</td>
+              <td id="preco-2">0.0</td>
+              <td id="preco-3">0.0</td>
+              <td id="preco-4">0.0</td>
+              <td id="preco-5">0.0</td>
+              <td id="preco-6">0.0</td>
+              <td id="preco-7">0.0</td>
+            </tr>
+            <tr id="JPY">
+              <td>Iene</td>
+              <td>JPY</td>
+              <td id="preco-1">0.0</td>
+              <td id="preco-2">0.0</td>
+              <td id="preco-3">0.0</td>
+              <td id="preco-4">0.0</td>
+              <td id="preco-5">0.0</td>
+              <td id="preco-6">0.0</td>
+              <td id="preco-7">0.0</td>
+            </tr>
+            <tr id="AUD">
+              <td>Dólar australiano</td>
+              <td>AUD</td>
+              <td id="preco-1">0.0</td>
+              <td id="preco-2">0.0</td>
+              <td id="preco-3">0.0</td>
+              <td id="preco-4">0.0</td>
+              <td id="preco-5">0.0</td>
+              <td id="preco-6">0.0</td>
+              <td id="preco-7">0.0</td>
+            </tr>
+            <tr id="CHF">
+              <td>Franco suíço</td>
+              <td>CHF</td>
+              <td id="preco-1">0.0</td>
+              <td id="preco-2">0.0</td>
+              <td id="preco-3">0.0</td>
+              <td id="preco-4">0.0</td>
+              <td id="preco-5">0.0</td>
+              <td id="preco-6">0.0</td>
+              <td id="preco-7">0.0</td>
+            </tr>
+            <tr id="CAD">
+              <td>Dólar canadense</td>
+              <td>CAD</td>
+              <td id="preco-1">0.0</td>
+              <td id="preco-2">0.0</td>
+              <td id="preco-3">0.0</td>
+              <td id="preco-4">0.0</td>
+              <td id="preco-5">0.0</td>
+              <td id="preco-6">0.0</td>
+              <td id="preco-7">0.0</td>
+            </tr>
+            <tr id="CNY">
+              <td>Yuan chinês</td>
+              <td>CNY</td>
+              <td id="preco-1">0.0</td>
+              <td id="preco-2">0.0</td>
+              <td id="preco-3">0.0</td>
+              <td id="preco-4">0.0</td>
+              <td id="preco-5">0.0</td>
+              <td id="preco-6">0.0</td>
+              <td id="preco-7">0.0</td>
+            </tr>
+            <tr id="ARS">
+              <td>Peso argentino</td>
+              <td>ARS</td>
+              <td id="preco-1">0.0</td>
+              <td id="preco-2">0.0</td>
+              <td id="preco-3">0.0</td>
+              <td id="preco-4">0.0</td>
+              <td id="preco-5">0.0</td>
+              <td id="preco-6">0.0</td>
+              <td id="preco-7">0.0</td>
+            </tr>
+            <tr id="RUB">
+              <td>Rublo</td>
+              <td>RUB</td>
+              <td id="preco-1">0.0</td>
+              <td id="preco-2">0.0</td>
+              <td id="preco-3">0.0</td>
+              <td id="preco-4">0.0</td>
+              <td id="preco-5">0.0</td>
+              <td id="preco-6">0.0</td>
+              <td id="preco-7">0.0</td>
             </tr>
           </tbody>
         </table>
